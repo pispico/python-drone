@@ -4,8 +4,14 @@ type: kubernetes
 name: default
 
 steps:
-- name: test
+- name: flake8
   image: python
   commands:
   - pip install -r requirements.txt
-  - pytest
+  - flake8 --statistics
+- name: pytest
+  image: python
+  commands:
+  - pip install -r requirements.txt
+  - pytest -v --cov
+
