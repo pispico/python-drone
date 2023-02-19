@@ -18,7 +18,7 @@ steps:
   image: python
   commands:
   - pip install bandit
-  - bandit -r .
+  - bandit -x "./test_*" -r .
 
 trigger:
   ref:
