@@ -15,3 +15,6 @@ steps:
   - pip install -r requirements.txt
   - pytest -v --cov
 
+trigger:
+  branch:
+  - main
