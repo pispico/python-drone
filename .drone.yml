@@ -16,7 +16,5 @@ steps:
   - pytest -v --cov
 
 trigger:
-  branch:
-  - main
-  event:
-  - push
+  ref:
+  - refs/heads/main
